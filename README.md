@@ -1,9 +1,9 @@
 This Application cover follwing features:
 
-1. CleanArchitecture, 
-2. CQRS, 
-3. MediatR, 
-4. AutoMapper, 
+1. CleanArchitecture 
+2. CQRS 
+3. MediatR 
+4. AutoMapper 
 5. FluentValidation
 6. Entity Framework Core
 7. Unit Test
