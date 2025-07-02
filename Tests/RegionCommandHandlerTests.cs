@@ -83,6 +83,18 @@ namespace Tests
         }
 
         [Fact]
+        public async Task UpdateRegion_ShouldThrowNotFoundException_WhenRegionNotFound()
+        {
+            // Arrange
+            _regionRepoMock.Setup(r => r.GetByIdAsync(It.IsAny<int>())).ReturnsAsync((Region?)null);
+
+            var command = new UpdateRegionCommand { RegionId = 99, RegionName = "Not Exist" };
+
+            // Act & Assert
+            await Assert.ThrowsAsync<NotFoundException>(() => _handler.Handle(command, CancellationToken.None));
+        }
+
+        [Fact]
         public async Task DeleteRegion_ShouldReturnTrue_WhenSuccessful()
         {
             // Arrange
@@ -97,17 +109,7 @@ namespace Tests
             // Assert
             result.Should().BeTrue();
         }
-        [Fact]
-        public async Task UpdateRegion_ShouldThrowNotFoundException_WhenRegionNotFound()
-        {
-            // Arrange
-            _regionRepoMock.Setup(r => r.GetByIdAsync(It.IsAny<int>())).ReturnsAsync((Region?)null);
 
-            var command = new UpdateRegionCommand { RegionId = 99, RegionName = "Not Exist" };
-
-            // Act & Assert
-            await Assert.ThrowsAsync<NotFoundException>(() => _handler.Handle(command, CancellationToken.None));
-        }
 
         [Fact]
         public async Task DeleteRegion_ShouldThrowNotFoundException_WhenRegionNotFound()
