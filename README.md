@@ -1,11 +1,13 @@
 This Application cover follwing features:
 
-1. CleanArchitecture, 
-2. CQRS, 
-3. MediatR, 
-4. AutoMapper, 
+1. CleanArchitecture 
+2. CQRS 
+3. MediatR 
+4. AutoMapper 
 5. FluentValidation
 6. Entity Framework Core
+7. Unit Test
+8. Fluent Assertions
 
 **Option 1: Concise Summary (Good for quick overview)**
 "This application leverages a Clean Architecture paradigm, meticulously separating concerns to enhance maintainability, scalability, and testability. It incorporates CQRS (Command Query Responsibility Segregation) using MediatR for robust, decoupled command and query handling. AutoMapper streamlines object-to-object mapping, while FluentValidation enforces rigorous data integrity. Data persistence is managed efficiently with Entity Framework Core."
