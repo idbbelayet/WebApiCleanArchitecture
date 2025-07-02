@@ -7,7 +7,7 @@ using Domain.Entities;
 using FluentAssertions;
 using Moq;
 
-namespace Tests
+namespace Tests.Tests
 {
     public class RegionCommandHandlerTests
     {

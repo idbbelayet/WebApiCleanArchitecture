@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System.Net;
 
-namespace Tests
+namespace Tests.Tests
 {
 
 
